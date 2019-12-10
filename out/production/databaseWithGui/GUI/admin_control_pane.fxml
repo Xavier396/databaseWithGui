@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="GUI.AdminControlPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+    <MenuBar prefHeight="30">
+    <menus>
+        <Menu text="人员管理">
+            <items>
+                <Menu fx:id="dManage" onAction="#goTodManager" text="快递员管理">
+
+                </Menu >
+                <Menu text="用户管理">
+
+                </Menu>
+            </items>
+        </Menu>
+    </menus>
+        <menus>
+            <Menu text="快递状态查看">
+
+            </Menu>
+        </menus>
+    </MenuBar>
+   </top>
+   <center>
+
+   </center>
+</BorderPane>
