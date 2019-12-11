@@ -19,7 +19,7 @@ public class AdminControlPane {
             Parent anotherRoot = FXMLLoader.load(getClass().getResource("deliver_manager.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("快递员管理");
-            anotherStage.setScene(new Scene(anotherRoot, 800, 300));
+            anotherStage.setScene(new Scene(anotherRoot, 800, 600));
             anotherStage.show();
         } catch (IOException e) {
             e.printStackTrace();

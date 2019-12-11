@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Font?>
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DeliverManager">
+<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DeliverManager">
    <children>
       <GridPane>
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="58.2" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.60000000000002" minWidth="10.0" prefWidth="142.60000000000002" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="70.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.39999999999998" minWidth="10.0" prefWidth="144.39999999999998" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="38.40000381469727" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.99999618530273" minWidth="10.0" prefWidth="56.999999999999986" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.59999999999997" minWidth="10.0" prefWidth="160.59999999999997" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.60000000000002" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.79999999999995" minWidth="10.0" prefWidth="156.80000000000007" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="54.39999999999998" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -26,36 +27,70 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="工 号" GridPane.rowIndex="1"  >
+            <Label text="姓 名" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <font>
                 <Font name="Microsoft YaHei" size="18.0" />
               </font>
             </Label>
-            <Label text="电话" GridPane.rowIndex="3" >
+            <Label text="电 话" GridPane.columnIndex="1" GridPane.rowIndex="3">
               <font>
                 <Font name="Microsoft YaHei" size="18.0" />
               </font>
             </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label text="Label" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" >
-              <items >
+            <TextField fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="phone" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button onAction="#query" fx:id="queryButton" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <DatePicker fx:id="birthday" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="生 日" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <font>
+                    <Font name="Microsoft YaHei" size="18.0" />
+                </font>
+            </Label>
+            <ComboBox fx:id="cb" onAction="#typeShift" prefHeight="22.0" prefWidth="159.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+              <items>
                 <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="--请选择--"/>
-                  <String fx:value="增加员工"  />
+                    <String fx:value="--请选择--" />
+                  <String fx:value="增加员工" />
                   <String fx:value="删除员工" />
                   <String fx:value="信息修改" />
                 </FXCollections>
-
               </items>
+                <value>
+                    <String fx:value="--请选择--" />
+                </value>
             </ComboBox>
-            <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label text="想要执行的操作" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="excute" mnemonicParsing="false" text="执行" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+            <Label text="sex" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ChoiceBox fx:id="gender" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="--请选择--" />
+                        <String fx:value="男" />
+                        <String fx:value="女" />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="--请选择--" />
+                </value>
+            </ChoiceBox>
+            <Label text="pwd" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <PasswordField fx:id="password" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Label text="工号" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="workerId" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label text="开始工作时间" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="workStart" text="00:00:00" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label text="stopWork" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField  fx:id="workStop" GridPane.columnIndex="5" GridPane.rowIndex="7" text="00:00:00" />
+            
+             
          </children>
       </GridPane>
    </children>

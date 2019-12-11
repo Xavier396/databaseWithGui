@@ -18,7 +18,7 @@ import java.io.IOException;
 
 import static utils.Utils.dialogCreator;
 
-public class Controller {
+public class HomePage {
     @FXML
     private Button login;
     @FXML
