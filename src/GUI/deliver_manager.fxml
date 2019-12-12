@@ -46,7 +46,7 @@
             </Label>
             <TextField fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField fx:id="phone" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button onAction="#query" fx:id="queryButton" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <Button onAction="#query" fx:id="queryButton" disable="true" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
             <DatePicker fx:id="birthday" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Label text="生 日" GridPane.columnIndex="1" GridPane.rowIndex="5">
                 <font>
