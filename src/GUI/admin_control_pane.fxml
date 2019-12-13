@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:controller="GUI.AdminControlPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminControlPane">
    <top>
     <MenuBar prefHeight="30">
     <menus>
@@ -11,7 +11,7 @@
             <items>
                 <Menu fx:id="dManage" onAction="#goTodManager" text="快递员管理">
 
-                </Menu >
+                </Menu>
                 <Menu text="用户管理">
 
                 </Menu>
@@ -19,7 +19,18 @@
         </Menu>
     </menus>
         <menus>
-            <Menu text="快递状态查看">
+            <Menu text="状态查看">
+                <items>
+                    <Menu fx:id="show_status" onAction="#getAllStatus" text="快递状态查看">
+
+                    </Menu>
+                    <Menu fx:id="show_worker" onAction="#getAllWorker" text="员工表查看">
+
+                    </Menu>
+                    <Menu fx:id="show_user" onAction="#getAllUser" text="用户表查看">
+
+                    </Menu>
+                </items>
 
             </Menu>
         </menus>
@@ -28,4 +39,5 @@
    <center>
 
    </center>
+
 </BorderPane>

@@ -7,7 +7,7 @@ public class BasicDao {
     	private static String driver = "com.mysql.jdbc.Driver";//在学校电脑上使用的jdbc
     //private static String driver ="com.microsoft.sqlserver.jdbc.SQLServerDriver"//数据库驱动
     private static String url = "jdbc:mysql://127.0.0.1:3306/express_service";		//连接url
-    //private static String url ="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=student";
+//    private static String url ="jdbc:sqlserver://127.0.0.1:1433;DatabaseName=student";
     private static String dbUser = "root";//数据库用户名
 //    private static String dbPwd="root";//学校电脑上的密码
     private static String dbPwd = "rootmima";//自己的数据库密码

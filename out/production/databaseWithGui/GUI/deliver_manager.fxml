@@ -46,7 +46,7 @@
             </Label>
             <TextField fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField fx:id="phone" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button onAction="#query" fx:id="queryButton" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <Button onAction="#query" fx:id="queryButton" disable="true" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
             <DatePicker fx:id="birthday" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Label text="生 日" GridPane.columnIndex="1" GridPane.rowIndex="5">
                 <font>
@@ -68,7 +68,7 @@
             </ComboBox>
             <Label text="想要执行的操作" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <Button fx:id="excute" mnemonicParsing="false" text="执行" GridPane.columnIndex="4" GridPane.rowIndex="11" />
-            <Label text="sex" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="性别" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <ChoiceBox fx:id="gender" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
@@ -81,13 +81,13 @@
                     <String fx:value="--请选择--" />
                 </value>
             </ChoiceBox>
-            <Label text="pwd" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="密码" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <PasswordField fx:id="password" GridPane.columnIndex="2" GridPane.rowIndex="9" />
             <Label text="工号" GridPane.columnIndex="4" GridPane.rowIndex="3" />
             <TextField fx:id="workerId" GridPane.columnIndex="5" GridPane.rowIndex="3" />
             <Label text="开始工作时间" GridPane.columnIndex="4" GridPane.rowIndex="5" />
             <TextField fx:id="workStart" text="00:00:00" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <Label text="stopWork" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Label text="结束工作时间" GridPane.columnIndex="4" GridPane.rowIndex="7" />
             <TextField  fx:id="workStop" GridPane.columnIndex="5" GridPane.rowIndex="7" text="00:00:00" />
             
              

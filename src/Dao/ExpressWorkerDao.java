@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExpressWorkerDao {
-    public List<TExpressWorker> getAllWorkers() {
+    public static List<TExpressWorker> getAllWorkers() {
         ResultSet resultSet = BasicDao.executeQuery("select * from express_workers");
         List<TExpressWorker> allWorkers = new ArrayList<>();
 
@@ -31,7 +31,7 @@ public class ExpressWorkerDao {
             tew.setId(rs.getInt("id"));
             tew.setWorker_birthday(rs.getString("worker_birthday"));
             tew.setWorker_id(rs.getString("worker_id"));
-            tew.setWorker_join_date(rs.getString("woker_join_date"));
+            tew.setWorker_join_date(rs.getString("worker_join_date"));
             tew.setWorker_name(rs.getString("worker_name"));
             tew.setWorker_phone(rs.getString("worker_phone"));
             tew.setWorker_pwd(rs.getString("worker_pwd"));

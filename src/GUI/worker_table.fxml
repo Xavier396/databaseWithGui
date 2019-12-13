@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<BorderPane fx:controller="GUI.WorkerTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="workerTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="workerId" prefWidth="75.0" text="工号" />
+          <TableColumn fx:id="workerName" prefWidth="75.0" text="姓名" />
+            <TableColumn fx:id="workerPwd" prefWidth="75.0" text="密码" />
+            <TableColumn fx:id="workerPhone" prefWidth="75.0" text="电话" />
+            <TableColumn fx:id="workerWorkStart" prefWidth="75.0" text="工作时间" />
+            <TableColumn fx:id="workerWorkStop" prefWidth="75.0" text="下班时间" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox prefWidth="150.0" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="按名字查找"/>
+                    <String fx:value="按工号查找"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <TextField />
+            <Button fx:id="query" onAction="#setWorkerTable" mnemonicParsing="false" text="查询" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
