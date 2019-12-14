@@ -65,4 +65,20 @@ public class ExpressWorkerDao {
         return res;
 
     }
+    public static List<TExpressWorker> getSelected(ResultSet rs)
+    {
+        List<TExpressWorker> selected=new ArrayList<>();
+        try {
+            while (rs.next())
+            {
+                TExpressWorker tew = convertToTExpressWorker(rs);
+                selected.add(tew);
+            }
+        }
+        catch (SQLException se)
+        {
+            se.printStackTrace();
+        }
+        return selected;
+    }
 }

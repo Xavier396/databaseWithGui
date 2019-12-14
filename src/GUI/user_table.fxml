@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.UserTable"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane fx:controller="GUI.UserTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="userTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="userId" prefWidth="75.0" text="用户Id" />
+          <TableColumn fx:id="userName" prefWidth="75.0" text="用户名" />
+            <TableColumn fx:id="userGender" prefWidth="75.0" text="性别" />
+            <TableColumn fx:id="userBirthday" prefWidth="75.0" text="生日" />
+            <TableColumn fx:id="userPhone" prefWidth="75.0" text="电话" />
+            <TableColumn fx:id="userPwd" prefWidth="75.0" text="密码" />
+        </columns>
+      </TableView>
+   </center>
+    <top>
+    <HBox prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+    <children>
+        <ChoiceBox prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="按名字查找" />
+                    <String fx:value="按帐号查找" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <TextField />
+        <Button fx:id="query" mnemonicParsing="false" onAction="#getAllUser" text="查询" />
+    </children>
+</HBox>
+    </top>
+</BorderPane>

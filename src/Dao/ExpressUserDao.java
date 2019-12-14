@@ -36,7 +36,7 @@ public class ExpressUserDao {
             teu.setUser_name(rs.getString("user_name"));
             teu.setUser_gender(rs.getString("user_gender").charAt(0));
             teu.setRegistertime(rs.getString("user_registertime"));
-            teu.setBirthday(rs.getString("user_birthday"));
+            teu.setBirthday(rs.getString("user_birthtday"));
             teu.setUser_phone(rs.getString("user_phone"));
             teu.setUser_pwd(rs.getString("user_pwd"));
         } catch (SQLException e) {
