@@ -1,5 +1,6 @@
 package Dao;
 
+import Table.TExpressUser;
 import Table.TExpressWorker;
 
 import java.sql.ResultSet;
@@ -81,4 +82,5 @@ public class ExpressWorkerDao {
         }
         return selected;
     }
+
 }

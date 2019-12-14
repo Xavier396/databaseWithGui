@@ -21,15 +21,19 @@
     <top>
     <HBox prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
     <children>
-        <ChoiceBox prefWidth="150.0">
+        <ChoiceBox fx:id="searchWay" prefWidth="150.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="全部" />
                     <String fx:value="按名字查找" />
                     <String fx:value="按帐号查找" />
                 </FXCollections>
             </items>
+            <value>
+                <String fx:value="全部" />
+            </value>
         </ChoiceBox>
-        <TextField />
+        <TextField fx:id="info" />
         <Button fx:id="query" mnemonicParsing="false" onAction="#getAllUser" text="查询" />
     </children>
 </HBox>

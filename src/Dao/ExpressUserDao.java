@@ -1,6 +1,7 @@
 package Dao;
 
 import Table.TExpressUser;
+import Table.TExpressWorker;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -63,5 +64,21 @@ public class ExpressUserDao {
             e.printStackTrace();
         }
         return res;
+    }
+    public static List<TExpressUser> getSelected(ResultSet rs)
+    {
+        List<TExpressUser> selected=new ArrayList<>();
+        try {
+            while (rs.next())
+            {
+                TExpressUser tew = convertToTExpressUser(rs);
+                selected.add(tew);
+            }
+        }
+        catch (SQLException se)
+        {
+            se.printStackTrace();
+        }
+        return selected;
     }
 }
