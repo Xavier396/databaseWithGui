@@ -11,14 +11,7 @@
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu onAction="#goToTask" mnemonicParsing="false" text="快递任务">
-            <items>
-              <MenuItem mnemonicParsing="false" text="快递管理" />
-            </items>
-          </Menu>
-          <Menu  mnemonicParsing="false" text="我的">
-            <items>
-              <MenuItem onAction="#goToInfoManager" mnemonicParsing="false" text="个人信息管理" />
-            </items>
+
           </Menu>
 
         </menus>

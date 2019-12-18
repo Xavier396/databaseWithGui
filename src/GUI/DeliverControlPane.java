@@ -6,11 +6,7 @@ public class DeliverControlPane {
     @FXML
     private void goToTask()
     {
-
+//TODO：加一个跳转到ExpressPanel的功能
     }
-    @FXML
-    private void goToInfoManager()
-    {
 
-    }
 }

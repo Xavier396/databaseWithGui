@@ -46,7 +46,7 @@ public class AdminControlPane {
     @FXML
     private void goToiManager()//快递状态管理
     {
-
+        //TODO:这里要实现对快递接货的代码
     }
     @FXML
     private void goTouManager()//个人信息管理
