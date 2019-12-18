@@ -45,6 +45,7 @@ public class ExpressWorkerDao {
         }
         return tew;
     }
+
     public static boolean isThisAdmin(String account,String pwd)
     {
         boolean res=false;
@@ -66,6 +67,7 @@ public class ExpressWorkerDao {
         return res;
 
     }
+
     public static List<TExpressWorker> getSelected(ResultSet rs)
     {
         List<TExpressWorker> selected=new ArrayList<>();
@@ -81,6 +83,27 @@ public class ExpressWorkerDao {
             se.printStackTrace();
         }
         return selected;
+    }
+    public static boolean isThisDeliver(String account,String pwd)
+    {
+        boolean res=false;
+        ResultSet rs=BasicDao.executeQuery("select * from express_workers where worker_id='"+account+"' and worker_pwd='"+pwd+"' and worker_role='D'");
+        try {
+            if(rs.next())
+            {
+                System.out.println("ok Deliver");
+                res=true;
+            }
+            else
+            {
+                System.out.println("wrong Deliver");
+                res=false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return res;
+
     }
 
 }

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.collections.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ServiceTable">
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="GUI.CheckMyExpress"
+            prefHeight="400.0" prefWidth="600.0">
+
     <center>
         <TableView fx:id="userTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <columns>
@@ -24,12 +30,14 @@
     <top>
         <HBox prefHeight="36.0" prefWidth="657.0" BorderPane.alignment="CENTER">
             <children>
-                <ChoiceBox fx:id="searchWay" prefWidth="150.0">
+                <ChoiceBox onAction="#cleanup" fx:id="searchWay" prefWidth="150.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="全部" />
-                            <String fx:value="按用户id查找" />
                             <String fx:value="按快递员id查找" />
+                            <String fx:value="未处理"/>
+                            <String fx:value="已寄送"/>
+                            <String fx:value="送达"/>
                         </FXCollections>
                     </items>
                     <value>
@@ -41,4 +49,5 @@
             </children>
         </HBox>
     </top>
+
 </BorderPane>

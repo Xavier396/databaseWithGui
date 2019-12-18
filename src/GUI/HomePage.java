@@ -67,15 +67,33 @@ public class HomePage {
         {
             if(ExpressUserDao.isThisAUser(userAccountText,password))
             {
+                DataStore.userId=userAccountText;
                 try {
                     Parent anotherRoot = FXMLLoader.load(getClass().getResource("user_control_pane.fxml"));
                     Stage anotherStage = new Stage();
                     anotherStage.setTitle("用户界面");
                     anotherStage.setScene(new Scene(anotherRoot, 600, 400));
                     anotherStage.show();
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
+            }
+            else if (ExpressWorkerDao.isThisDeliver(userAccountText,password))
+            {
+                DataStore.deliverId=userAccountText;
+                try {
+                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("deliver_control_pane.fxml"));
+                    Stage anotherStage = new Stage();
+                    anotherStage.setTitle("快递员界面");
+                    anotherStage.setScene(new Scene(anotherRoot, 600, 400));
+                    anotherStage.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             }
             else{
                 dialogCreator(3,"错误","用户名或密码输入错误!","请检查输入");
@@ -84,15 +102,18 @@ public class HomePage {
         if (admin)
            if (ExpressWorkerDao.isThisAdmin(userAccountText,password))
            {
+               DataStore.workerId=userAccountText;
                try {
                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("admin_control_pane.fxml"));
                    Stage anotherStage = new Stage();
                    anotherStage.setTitle("管理员界面");
                    anotherStage.setScene(new Scene(anotherRoot, 600, 400));
                    anotherStage.show();
+
                } catch (IOException e) {
                    e.printStackTrace();
                }
+
            }
         else {
                dialogCreator(3,"错误","用户名或密码输入错误!","请检查输入");

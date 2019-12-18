@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!--送快递表单-->
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.231" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SendMyExpress">
+   <children>
+      <GridPane prefHeight="346.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="62.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="69.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="169.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="47.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="5.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="送货方式" GridPane.rowIndex="1" />
+            <Label text="物品名称" GridPane.rowIndex="3" />
+            <Label text="邮递员选择" GridPane.rowIndex="5" />
+            <Label text="出发地址" GridPane.rowIndex="7" />
+            <Label text="预约日期" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="预约时间" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="备注" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="目的地址" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <ChoiceBox onAction="#modeSwitch" fx:id="book" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="直送" />
+                    <String fx:value="预约" />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="直送" />
+                </value>
+            </ChoiceBox>
+            <TextField  fx:id="itemForSend" prefHeight="22.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="posterman" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker  fx:id="deliverDate" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="deliverTime" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextArea fx:id="startAddress" prefHeight="64.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextArea fx:id="endAddress" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Button onAction="#query" mnemonicParsing="false" text="查询人员" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button onAction="#send" mnemonicParsing="false" text="寄送" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="notes" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

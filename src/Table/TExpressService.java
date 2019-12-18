@@ -4,15 +4,11 @@ public class TExpressService {
     private int id;
     private String user_id;
     private String worker_id;
-    private String user_phone;
-    private String worker_phone;
     private String delivery;
     private String delivery_status;
     private String start_address;
     private String aim_address;
-    private String start_time;
-    private String end_time;
-    private int rate;
+    private String hint;
     private String time_stamp;
 
     public int getId() {
@@ -39,21 +35,6 @@ public class TExpressService {
         this.worker_id = worker_id;
     }
 
-    public String getUser_phone() {
-        return user_phone;
-    }
-
-    public void setUser_phone(String user_phone) {
-        this.user_phone = user_phone;
-    }
-
-    public String getWorker_phone() {
-        return worker_phone;
-    }
-
-    public void setWorker_phone(String worker_phone) {
-        this.worker_phone = worker_phone;
-    }
 
     public String getDelivery() {
         return delivery;
@@ -87,28 +68,12 @@ public class TExpressService {
         this.aim_address = aim_address;
     }
 
-    public String getStart_time() {
-        return start_time;
+    public String getHint() {
+        return hint;
     }
 
-    public void setStart_time(String start_time) {
-        this.start_time = start_time;
-    }
-
-    public String getEnd_time() {
-        return end_time;
-    }
-
-    public void setEnd_time(String end_time) {
-        this.end_time = end_time;
-    }
-
-    public int getRate() {
-        return rate;
-    }
-
-    public void setRate(int rate) {
-        this.rate = rate;
+    public void setHint(String hint) {
+        this.hint = hint;
     }
 
     public String getTime_stamp() {

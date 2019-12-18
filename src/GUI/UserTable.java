@@ -3,7 +3,6 @@ package GUI;
 import Dao.BasicDao;
 import Dao.ExpressUserDao;
 import Table.TExpressUser;
-import Table.TExpressWorker;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -67,7 +66,6 @@ public class UserTable {
                 userPhone.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser_phone()));
                 userPwd.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser_pwd()));
                 userTable.setItems(userList);
-
                 break;
             case "按帐号查找":
                 String s = info.getText();
@@ -85,7 +83,6 @@ public class UserTable {
                 userPhone.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser_phone()));
                 userPwd.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser_pwd()));
                 userTable.setItems(ul);
-
                 break;
         }
     }

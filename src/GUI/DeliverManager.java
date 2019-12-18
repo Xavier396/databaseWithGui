@@ -202,7 +202,7 @@ public class DeliverManager {
 
 
         //拼接字符串
-        x=BasicDao.executeUpdate("update express_workers set worker_name='"+worker_name+"',worker_gender'"+worker_gender+"',worker_phone'"+worker_phone+"',worker_birthday'"+worker_birthday.toString()+"',worker_pwd'"+worker_password+"',worker_work_time'"+worker_start_time+"',worker_finish_time'"+worker_finish_time+"'  where worker_id='"+workerId.getText()+"' and worker_role='D'");
+        x=BasicDao.executeUpdate("update express_workers set worker_name='"+worker_name+"',worker_gender='"+worker_gender+"',worker_phone='"+worker_phone+"',worker_birthday='"+worker_birthday.toString()+"',worker_pwd='"+worker_password+"',worker_work_time='"+worker_start_time+"',worker_finish_time='"+worker_finish_time+"'  where worker_id='"+workerId.getText()+"' and worker_role='D'");
         Utils.dialogCreator(1,"成功","您的相关信息已经完成更改","更新信息成功");
         name.setText("");
         phone.setText("");

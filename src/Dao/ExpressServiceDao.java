@@ -1,6 +1,7 @@
 package Dao;
 
 import Table.TExpressService;
+import Table.TExpressUser;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,16 +30,12 @@ public class ExpressServiceDao {
             expressService.setId(rs.getInt("id"));
             expressService.setUser_id(rs.getString("user_id"));
             expressService.setWorker_id(rs.getString("worker_id"));
-            expressService.setUser_phone(rs.getString("user_phone"));
-            expressService.setWorker_phone(rs.getString("worker_phone"));
             expressService.setDelivery(rs.getString("delivery"));
-            expressService.setDelivery_status(rs.getString("deliver_status"));
+            expressService.setDelivery_status(rs.getString("delivery_status"));
             expressService.setStart_address(rs.getString("start_address"));
             expressService.setAim_address(rs.getString("aim_address"));
-            expressService.setStart_time(rs.getString("start_time"));
-            expressService.setEnd_time(rs.getString("end_time"));
-            expressService.setRate(rs.getInt("rate"));
-            expressService.setTime_stamp(rs.getString("times_stamp"));
+            expressService.setHint(rs.getString("hint"));
+            expressService.setTime_stamp(rs.getString("time_stamp"));
 
 
         } catch (SQLException e) {
@@ -46,6 +43,22 @@ public class ExpressServiceDao {
         }
 
         return expressService;
+    }
+    public static List<TExpressService> getSelected(ResultSet rs)
+    {
+        List<TExpressService> selected=new ArrayList<>();
+        try {
+            while (rs.next())
+            {
+                TExpressService tew = convertToExpressService(rs);
+                selected.add(tew);
+            }
+        }
+        catch (SQLException se)
+        {
+            se.printStackTrace();
+        }
+        return selected;
     }
 
 }

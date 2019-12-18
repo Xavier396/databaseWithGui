@@ -7,14 +7,15 @@
    <top>
     <MenuBar prefHeight="30">
     <menus>
-        <Menu text="人员管理">
+        <Menu  text="信息管理">
             <items>
                 <Menu fx:id="dManage" onAction="#goTodManager" text="快递员管理">
 
                 </Menu>
-                <Menu text="用户管理">
+                <Menu fx:id="iManage" text="快递管理">
 
                 </Menu>
+                <Menu fx:id="uManage" onAction="#goTouManager" text="管理员信息更改"/>
             </items>
         </Menu>
     </menus>
