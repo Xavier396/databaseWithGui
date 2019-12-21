@@ -1,4 +1,4 @@
-package GUI;
+package Controlor;
 
 
 import Dao.ExpressUserDao;
@@ -36,7 +36,7 @@ public class HomePage {
     protected void reg()
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("regsist.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/regsist.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("用户注册");
             anotherStage.setScene(new Scene(anotherRoot, 300, 600));
@@ -69,7 +69,7 @@ public class HomePage {
             {
                 DataStore.userId=userAccountText;
                 try {
-                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("user_control_pane.fxml"));
+                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/user_control_pane.fxml"));
                     Stage anotherStage = new Stage();
                     anotherStage.setTitle("用户界面");
                     anotherStage.setScene(new Scene(anotherRoot, 600, 400));
@@ -84,7 +84,7 @@ public class HomePage {
             {
                 DataStore.deliverId=userAccountText;
                 try {
-                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("deliver_control_pane.fxml"));
+                    Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/deliver_control_pane.fxml"));
                     Stage anotherStage = new Stage();
                     anotherStage.setTitle("快递员界面");
                     anotherStage.setScene(new Scene(anotherRoot, 600, 400));
@@ -104,7 +104,7 @@ public class HomePage {
            {
                DataStore.workerId=userAccountText;
                try {
-                   Parent anotherRoot = FXMLLoader.load(getClass().getResource("admin_control_pane.fxml"));
+                   Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/admin_control_pane.fxml"));
                    Stage anotherStage = new Stage();
                    anotherStage.setTitle("管理员界面");
                    anotherStage.setScene(new Scene(anotherRoot, 600, 400));

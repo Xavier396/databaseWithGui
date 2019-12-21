@@ -6,11 +6,15 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DeliverControlPane">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlor.DeliverControlPane">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu onAction="#goToTask" mnemonicParsing="false" text="快递任务">
+          <Menu  mnemonicParsing="false" text="快递任务">
+              <items>
+                  <Menu onAction="#goToTask" mnemonicParsing="false" text="快递任务"/>
+
+              </items>
 
           </Menu>
 

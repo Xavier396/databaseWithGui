@@ -1,4 +1,4 @@
-package GUI;
+package Controlor;
 
 public class DataStore {
     public static String userId;

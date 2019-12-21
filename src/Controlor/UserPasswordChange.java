@@ -1,5 +1,6 @@
-package GUI;
+package Controlor;
 
+import Controlor.DataStore;
 import Dao.BasicDao;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -9,10 +10,6 @@ import utils.Utils;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,7 +56,7 @@ public class UserPasswordChange {
         }
 
 
-        BasicDao.executeUpdate("update express_user set user_name='"+worker_name+"',user_pwd='"+worker_password+"',user_phone='"+worker_start_time+"',user_birthtday='"+worker_finish_time+"'  where user_account='"+DataStore.userId+"'");
+        BasicDao.executeUpdate("update express_user set user_name='"+worker_name+"',user_pwd='"+worker_password+"',user_phone='"+worker_start_time+"',user_birthtday='"+worker_finish_time+"'  where user_account='"+ DataStore.userId+"'");
         Utils.dialogCreator(1,"成功","您的相关信息已经完成更改","更新信息成功");
         return 0;
     }

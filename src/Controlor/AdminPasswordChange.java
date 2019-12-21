@@ -1,8 +1,7 @@
-package GUI;
+package Controlor;
 
 import Dao.BasicDao;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import utils.Utils;
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlor.ExpressManager">
+   <center>
+      <TableView prefHeight="332.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.20001220703125" text="Column X" />
+            <TableColumn prefWidth="75.19998168945312" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox prefWidth="150.0" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="全部" />
+                        <String fx:value="修改信息" />
+                        <String fx:value="删除订单" />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="全部" />
+                </value>
+            </ChoiceBox>
+            <TextField />
+            <TextField />
+            <Button mnemonicParsing="false" text="查询" />
+            <Button mnemonicParsing="false" text="执行" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

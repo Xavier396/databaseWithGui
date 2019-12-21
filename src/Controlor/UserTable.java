@@ -1,4 +1,4 @@
-package GUI;
+package Controlor;
 
 import Dao.BasicDao;
 import Dao.ExpressUserDao;

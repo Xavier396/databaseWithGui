@@ -1,4 +1,4 @@
-package GUI;
+package Controlor;
 
 import Dao.ExpressWorkerDao;
 import Table.TExpressService;
@@ -47,12 +47,22 @@ public class AdminControlPane {
     private void goToiManager()//快递状态管理
     {
         //TODO:这里要实现对快递接货的代码
+        try {
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/express_manager.fxml"));
+            Stage anotherStage = new Stage();
+            anotherStage.setTitle("快递信息管理");
+            anotherStage.setScene(new Scene(anotherRoot, 800, 600));
+            anotherStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
     @FXML
     private void goTouManager()//个人信息管理
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("admin_password_change.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/admin_password_change.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("管理员信息更改");
             anotherStage.setScene(new Scene(anotherRoot, 800, 600));
@@ -65,7 +75,7 @@ public class AdminControlPane {
     private void getAllStatus()
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("service_table.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/service_table.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("所有快递状态");
             anotherStage.setScene(new Scene(anotherRoot, 1024, 768));
@@ -81,7 +91,7 @@ public class AdminControlPane {
     private void getAllWorker()
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("worker_table.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/worker_table.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("所有员工信息");
             anotherStage.setScene(new Scene(anotherRoot, 640, 480));
@@ -94,7 +104,7 @@ public class AdminControlPane {
     private void getAllUser()
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("user_table.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/user_table.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("所有用户信息");
             anotherStage.setScene(new Scene(anotherRoot, 640, 480));

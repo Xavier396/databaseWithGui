@@ -1,4 +1,4 @@
-package GUI;
+package Controlor;
 
 import Dao.BasicDao;
 import Dao.ExpressServiceDao;
@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import utils.Utils;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CheckMyExpress {
@@ -44,6 +45,9 @@ public class CheckMyExpress {
     private void cleanup()
     {
         info.setText("");
+        List<TExpressService> some=new ArrayList<>();
+        ObservableList<TExpressService> nothing=FXCollections.observableList(some);
+        userTable.setItems(nothing);
     }
     @FXML
     private void getAllService() {
