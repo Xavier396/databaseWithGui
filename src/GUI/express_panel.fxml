@@ -36,7 +36,7 @@
                         <String fx:value="全部" />
                     </value>
                 </ChoiceBox>
-                <TextField fx:id="info" />
+                <TextField fx:id="info" promptText="请输入用户id" />
                 <Button mnemonicParsing="false" onAction="#search" text="查询" />
                 <Button fx:id="getOrder" mnemonicParsing="false" disable="true" onAction="#deal" text="接单" />
             </children>

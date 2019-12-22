@@ -44,8 +44,8 @@
                 <Font name="Microsoft YaHei" size="18.0" />
               </font>
             </Label>
-            <TextField fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="phone" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="name" GridPane.columnIndex="2" GridPane.rowIndex="1" promptText="请输入姓名"  />
+            <TextField fx:id="phone" GridPane.columnIndex="2" GridPane.rowIndex="3"  promptText="请输入电话" />
             <Button onAction="#query" fx:id="queryButton" disable="true" mnemonicParsing="false" text="查询" GridPane.columnIndex="3" GridPane.rowIndex="11" />
             <DatePicker fx:id="birthday" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Label text="生 日" GridPane.columnIndex="1" GridPane.rowIndex="5">
@@ -84,11 +84,11 @@
             <Label text="密码" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <PasswordField fx:id="password" GridPane.columnIndex="2" GridPane.rowIndex="9" />
             <Label text="工号" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <TextField fx:id="workerId" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextField fx:id="workerId" GridPane.columnIndex="5" GridPane.rowIndex="3" promptText="请输入工号"  />
             <Label text="开始工作时间" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <TextField fx:id="workStart" text="00:00:00" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <TextField promptText="请输入工作时间"  fx:id="workStart" text="00:00:00" GridPane.columnIndex="5" GridPane.rowIndex="5" />
             <Label text="结束工作时间" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <TextField  fx:id="workStop" GridPane.columnIndex="5" GridPane.rowIndex="7" text="00:00:00" />
+            <TextField promptText="请输入下班时间"  fx:id="workStop" GridPane.columnIndex="5" GridPane.rowIndex="7" text="00:00:00" />
             
              
          </children>

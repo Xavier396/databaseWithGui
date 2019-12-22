@@ -39,13 +39,13 @@
                  <Font name="Microsoft YaHei" size="18.0" />
              </font>
          </Label>
-             <TextField fx:id="userName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+             <TextField fx:id="userName" promptText="请输入用户名,长度为4-16字符" GridPane.columnIndex="1" GridPane.rowIndex="2" />
              <Label text="密  码" GridPane.columnIndex="0" GridPane.rowIndex="4">
                  <font>
                      <Font name="Microsoft YaHei" size="18.0" />
                  </font>
              </Label>
-             <PasswordField fx:id="passWord" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+             <PasswordField fx:id="passWord" promptText="请输入密码,长度为4-16字符" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
              <Label text="性  别" GridPane.columnIndex="0" GridPane.rowIndex="6">
                  <font>
@@ -84,7 +84,7 @@
                      <Font name="Microsoft YaHei" size="18.0" />
                  </font>
              </Label>
-             <TextField fx:id="userPhone" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+             <TextField fx:id="userPhone" promptText="请输入电话号码" GridPane.columnIndex="1" GridPane.rowIndex="8" />
              <Label text="生日" GridPane.columnIndex="0" GridPane.rowIndex="10">
                  <font>
                      <Font name="Microsoft YaHei" size="18.0" />

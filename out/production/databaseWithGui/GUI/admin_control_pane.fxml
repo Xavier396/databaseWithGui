@@ -12,7 +12,7 @@
                 <Menu fx:id="dManage" onAction="#goTodManager" text="快递员管理">
 
                 </Menu>
-                <Menu fx:id="iManage" text="快递管理">
+                <Menu fx:id="iManage" onAction="#goToiManager" text="快递管理">
 
                 </Menu>
                 <Menu fx:id="uManage" onAction="#goTouManager" text="管理员信息更改"/>

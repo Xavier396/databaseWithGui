@@ -33,7 +33,7 @@
 
 
             </ChoiceBox>
-            <TextField fx:id="input" />
+            <TextField fx:id="input"  promptText="请输入相应的信息"/>
             <Button fx:id="query" onAction="#setWorkerTable" mnemonicParsing="false" text="查询" />
          </children>
       </HBox>

@@ -30,7 +30,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <TextField fx:id="userAccount" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="userAccount" promptText="请输入帐号" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
 
             <Label text="密码:" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -38,7 +38,7 @@
                     <Font name="Microsoft YaHei" size="20.0" />
                 </font>
             </Label>
-            <PasswordField fx:id="pwd" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <PasswordField fx:id="pwd" promptText="请输入密码" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Button fx:id="login"  text="登录" onAction="#login" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
          <Button fx:id="regsis" onAction="#reg" mnemonicParsing="false" text="注册用户" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
 

@@ -57,7 +57,7 @@
                     <String fx:value="直送" />
                 </value>
             </ChoiceBox>
-            <TextField  fx:id="itemForSend" prefHeight="22.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField  fx:id="itemForSend" promptText="请输入物品名" prefHeight="22.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ChoiceBox fx:id="posterman" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <DatePicker  fx:id="deliverDate" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField fx:id="deliverTime" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
@@ -65,7 +65,7 @@
             <TextArea fx:id="endAddress" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
             <Button onAction="#query" mnemonicParsing="false" text="查询人员" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Button onAction="#send" mnemonicParsing="false" text="寄送" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <TextField fx:id="notes" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField fx:id="notes" promptText="(可选)" GridPane.columnIndex="3" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </children>

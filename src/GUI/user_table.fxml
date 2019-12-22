@@ -33,7 +33,7 @@
                 <String fx:value="全部" />
             </value>
         </ChoiceBox>
-        <TextField fx:id="info" />
+        <TextField fx:id="info" promptText="请输入相应的信息"/>
         <Button fx:id="query" mnemonicParsing="false" onAction="#getAllUser" text="查询" />
     </children>
 </HBox>

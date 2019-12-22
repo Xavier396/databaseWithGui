@@ -44,7 +44,7 @@
                         <String fx:value="全部" />
                     </value>
                 </ChoiceBox>
-                <TextField fx:id="info" />
+                <TextField fx:id="info" promptText="请输入快递员工号"  />
                 <Button  fx:id="query" mnemonicParsing="false" onAction="#getAllService" text="查询" />
             </children>
         </HBox>

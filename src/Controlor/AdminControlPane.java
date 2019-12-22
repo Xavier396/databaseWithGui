@@ -34,7 +34,7 @@ public class AdminControlPane {
     private void goTodManager()
     {
         try {
-            Parent anotherRoot = FXMLLoader.load(getClass().getResource("deliver_manager.fxml"));
+            Parent anotherRoot = FXMLLoader.load(getClass().getResource("../GUI/deliver_manager.fxml"));
             Stage anotherStage = new Stage();
             anotherStage.setTitle("快递员管理");
             anotherStage.setScene(new Scene(anotherRoot, 800, 600));
